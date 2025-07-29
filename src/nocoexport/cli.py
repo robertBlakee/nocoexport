@@ -1,5 +1,5 @@
 import argparse
-from .main import listBases, exportBase, importBase, moveBase
+from .main import list_bases, export_base, import_base, move_base
 
 
 # Command line interface handler
@@ -34,10 +34,10 @@ def cli():
     # Call specified function depend on terminal command
     match parsed_args.function:
         case 'list':
-            listBases(parsed_args.source)
+            list_bases(parsed_args.source)
         case 'export':
-            exportBase(parsed_args.source, parsed_args.title)
+            export_base(parsed_args.source, parsed_args.title)
         case 'import':
-            importBase(parsed_args.source, parsed_args.target)
+            import_base(parsed_args.source, parsed_args.target)
         case 'move':
-            moveBase(parsed_args.source, parsed_args.target, parsed_args.title)
+            move_base(parsed_args.source, parsed_args.target, parsed_args.title)
